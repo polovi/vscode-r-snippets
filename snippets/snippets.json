@@ -1,5 +1,4 @@
 {
-	// es6
 	"import": {
     "prefix": "imp",
     "body": [
@@ -96,7 +95,6 @@
     "description": "Creates and assigns a local variable using array destructing"
   },
 
-	// JavaScript
 	"consoleLog": {
 		"prefix": "log",
 		"body": "console.log($1);",
@@ -123,7 +121,6 @@
 		"description": "Single line TODO string"
 	},
 
-	// react
 	"reactCreateClass": {
 		"prefix": "rcc",
 		"body": [
