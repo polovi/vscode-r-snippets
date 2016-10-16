@@ -7,237 +7,259 @@
     ],
     "description": "Import module"
   },
-"importDestructing": {
-"prefix": "imd",
-"body": [
-"import { $2:moduleName } from '${1:module}'",
-"$3"
-],
-"description": "Imports only a portion of the module"
-},
-"importEverything": {
-"prefix": "ime",
-"body": [
-"import * as ${2:alias} from '${1:module}'",
-"$3"
-],
-"description": "Imports everything as alias from the module"
-},
-"importAs": {
-"prefix": "ima",
-"body": [
-"import {${2:originalName} as ${3:alias} } from '${1:module}'",
-"$4"
-],
-"description": "Imports a specific portion of the module by assigning a local alias"
-},
 
-"constructor": {
-"prefix": "con",
-"body": [
-"constructor(${1:params}) {",
-"\t$2",
-"}\n"
-],
-"description": "Add default constructor in a class"
-},
-"method": {
-"prefix": "met",
-"body": [
-"${1:methodName}(${2:params}) {",
-"\t$3",
-"}\n"
-],
-"description": "Create class method"
-},
-"autobindMethod": {
-"prefix": "amet",
-"body": [
-"@autobind",
-"${1:methodName}(${2:params}) {",
-"\t$3",
-"}\n"
-],
-"description": "Create class method"
-},
-"propertyGet": {
-"prefix": "getter",
-"body": [
-"get ${1:propertyname}() {",
-"\treturn this.${2:property};",
-"}\n"
-],
-"description": "Creates a property getter "
-},
-"propertySet": {
-"prefix": "setter",
-"body": [
-"set ${1:propertyName}(${2:value}) {",
-"\tthis.${3:property} = $2;",
-"}\n"
-],
-"description": "Creates a property setter"
-},
+  "importDestructing": {
+    "prefix": "imd",
+    "body": [
+      "import { $2:moduleName } from '${1:module}'",
+      "$3"
+    ],
+    "description": "Imports only a portion of the module"
+  },
 
-"anonymousFunction": {
-"prefix": "anfn",
-"body": "(${1:params}) => $2",
-"description": "Creates an anonymous function"
-},
-"destructingObject": {
-"prefix": "deso",
-"body": "const { ${propertyName} } = ${object};",
-"description": "Creates and assigns a local variable using object destructing"
-},,
-"destructingArray": {
-"prefix": "desa",
-"body": "const [ ${propertyName} ] = ${array};",
-"description": "Creates and assigns a local variable using array destructing"
-},
+  "importEverything": {
+    "prefix": "ime",
+    "body": [
+      "import * as ${2:alias} from '${1:module}'",
+      "$3"
+    ],
+    "description": "Imports everything as alias from the module"
+  },
 
-"consoleLog": {
-"prefix": "log",
-"body": "console.log($1);",
-"description": "Displays a message in the console"
-},
-"consoleError": {
-"prefix": "error",
-"body": "console.error($1);",
-"description": "Displays a message in the console as error with stack trace"
-},
-"promise": {
-"prefix": "prom",
-"body": [
-"return new Promise((resolve, reject) => {",
-"\t${1}",
-"});\n"
-],
-"description": "Creates and returns a new Promise in the standard ES6 syntax"
-},
+  "importAs": {
+    "prefix": "ima",
+    "body": [
+      "import {${2:originalName} as ${3:alias} } from '${1:module}'",
+      "$4"
+    ],
+    "description": "Imports a specific portion of the module by assigning a local alias"
+  },
 
-"todo": {
-"prefix": "todo",
-"body": "//TODO: ${text:Enter TODO}",
-"description": "Single line TODO string"
-},
+  "constructor": {
+    "prefix": "con",
+    "body": [
+      "constructor(${1:params}) {",
+      "\t$2",
+      "}\n"
+    ],
+    "description": "Add default constructor in a class"
+  },
 
-"reactCreateClass": {
-"prefix": "rcc",
-"body": [
-"import React, { Component } from 'react'\n\n",
-"class ${1:className} extends Component {",
-"\tconstructor(props, context) {",
-"\t\tsuper(props, context);",
-"\t}\n",
-"\trender() {",
-"\t\treturn (",
-"\t\t\t${2}",
-"\t\t)",
-"\t}",
-"}\n",
-"export default ${1}"
-],
-"description": "Create React component class skeleton"
-},
-"componentWillMount": {
-"prefix": "cwm",
-"body": [
-"componentWillMount() {",
-"\t$1",
-"}\n"
-],
-"description": "React componentWillMount method"
-},
-"componentDidMount": {
-"prefix": "cdm",
-"body": [
-"componentDidMount() {",
-"\t$1",
-"}\n"
-],
-"description": "React componentDidMount method"
-},
-"componentWillReceiveProps": {
-"prefix": "cwrp",
-"body": [
-"componentWillReceiveProps(nextProps) {",
-"\t$1",
-"}\n"
-],
-"description": "React componentWillReceiveProps method"
-},
-"shouldComponentUpdate": {
-"prefix": "scu",
-"body": [
-"shouldComponentUpdate(nextProps, nextStat) {",
-"\t$1",
-"}\n"
-],
-"description": "React shouldComponentUpdate method"
-},
-"componentWillUpdate": {
-"prefix": "cwu",
-"body": [
-"componentWillUpdate(nextProps, nextStat) {",
-"\t$1",
-"}\n"
-],
-"description": "React componentWillUpdate method"
-},
-"componentDidUpdate": {
-"prefix": "cdu",
-"body": [
-"componentDidUpdate(prevProps, prevState) {",
-"\t$1",
-"}\n"
-],
-"description": "React componentDidUpdate method"
-},
-"componentWillUnmount": {
-"prefix": "cwun",
-"body": [
-"componentWillUnmount() {",
-"\t$1",
-"}\n"
-],
-"description": "React componentWillUnmount method"
-},
-"componentWillReact": {
-"prefix": "cwr",
-"body": [
-"componentWillReact() {",
-"\t$1",
-"}\n"
-],
-"description": "Component will react mobx method"
-},
-"render": {
-"prefix": "rend",
-"body": [
-"render() {",
-"\treturn (",
-"\t\t$1",
-"\t)",
-"}\n"
-],
-"description": "React render method"
-},
-"defaultProps": {
-"prefix": "defaultProps",
-"body": [
-"static defaultProps = {",
-"\t${1:propName}: ${2:propValue},",
-"}\n"
-],
-"description": "React default props"
-},
-"propTypes": {
-"prefix": "propTypes",
-"body": [
-"static propTypes = {",
-"\t${1:propName}: ${2:propType},",
-"}\n"
-],
-"description": "React prop types"
-}
+  "method": {
+    "prefix": "met",
+    "body": [
+      "${1:methodName}(${2:params}) {",
+      "\t$3",
+      "}\n"
+    ],
+    "description": "Create class method"
+  },
+
+  "autobindMethod": {
+    "prefix": "amet",
+    "body": [
+      "@autobind",
+      "${1:methodName}(${2:params}) {",
+      "\t$3",
+      "}\n"
+    ],
+    "description": "Create class method"
+  },
+
+  "propertyGet": {
+    "prefix": "getter",
+    "body": [
+      "get ${1:propertyname}() {",
+      "\treturn this.${2:property};",
+      "}\n"
+    ],
+    "description": "Creates a property getter "
+  },
+
+  "propertySet": {
+    "prefix": "setter",
+    "body": [
+      "set ${1:propertyName}(${2:value}) {",
+      "\tthis.${3:property} = $2;",
+      "}\n"
+    ],
+    "description": "Creates a property setter"
+  },
+
+  "anonymousFunction": {
+    "prefix": "anfn",
+    "body": "(${1:params}) => $2",
+    "description": "Creates an anonymous function"
+  },
+
+  "destructingObject": {
+    "prefix": "deso",
+    "body": "const { ${propertyName} } = ${object};",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+
+  "destructingArray": {
+    "prefix": "desa",
+    "body": "const [ ${propertyName} ] = ${array};",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+
+  "consoleLog": {
+    "prefix": "log",
+    "body": "console.log($1);",
+    "description": "Displays a message in the console"
+  },
+
+  "consoleError": {
+    "prefix": "error",
+    "body": "console.error($1);",
+    "description": "Displays a message in the console as error with stack trace"
+  },
+
+  "promise": {
+    "prefix": "prom",
+    "body": [
+      "return new Promise((resolve, reject) => {",
+      "\t${1}",
+      "});\n"
+    ],
+    "description": "Creates and returns a new Promise in the standard ES6 syntax"
+  },
+
+  "todo": {
+    "prefix": "todo",
+    "body": "//TODO: ${text:Enter TODO}",
+    "description": "Single line TODO string"
+  },
+
+  "reactCreateClass": {
+    "prefix": "rcc",
+    "body": [
+      "import React, { Component } from 'react'\n\n",
+      "class ${1:className} extends Component {",
+      "\tconstructor(props, context) {",
+      "\t\tsuper(props, context);",
+      "\t}\n",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t${2}",
+      "\t\t)",
+      "\t}",
+      "}\n",
+      "export default ${1}"
+    ],
+    "description": "Create React component class skeleton"
+  },
+
+  "componentWillMount": {
+    "prefix": "cwm",
+    "body": [
+      "componentWillMount() {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React componentWillMount method"
+  },
+
+  "componentDidMount": {
+    "prefix": "cdm",
+    "body": [
+      "componentDidMount() {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React componentDidMount method"
+  },
+
+  "componentWillReceiveProps": {
+    "prefix": "cwrp",
+    "body": [
+      "componentWillReceiveProps(nextProps) {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React componentWillReceiveProps method"
+  },
+
+  "shouldComponentUpdate": {
+    "prefix": "scu",
+    "body": [
+      "shouldComponentUpdate(nextProps, nextStat) {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React shouldComponentUpdate method"
+  },
+
+  "componentWillUpdate": {
+    "prefix": "cwu",
+    "body": [
+      "componentWillUpdate(nextProps, nextStat) {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React componentWillUpdate method"
+  },
+
+  "componentDidUpdate": {
+    "prefix": "cdu",
+    "body": [
+      "componentDidUpdate(prevProps, prevState) {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React componentDidUpdate method"
+  },
+
+  "componentWillUnmount": {
+    "prefix": "cwun",
+    "body": [
+      "componentWillUnmount() {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "React componentWillUnmount method"
+  },
+
+  "componentWillReact": {
+    "prefix": "cwr",
+    "body": [
+      "componentWillReact() {",
+      "\t$1",
+      "}\n"
+    ],
+    "description": "Component will react mobx method"
+  },
+
+  "render": {
+    "prefix": "rend",
+    "body": [
+      "render() {",
+      "\treturn (",
+      "\t\t$1",
+      "\t)",
+      "}\n"
+    ],
+    "description": "React render method"
+  },
+
+  "defaultProps": {
+    "prefix": "defaultProps",
+    "body": [
+      "static defaultProps = {",
+      "\t${1:propName}: ${2:propValue},",
+      "}\n"
+    ],
+    "description": "React default props"
+  },
+
+  "propTypes": {
+    "prefix": "propTypes",
+    "body": [
+      "static propTypes = {",
+      "\t${1:propName}: ${2:propType},",
+      "}\n"
+    ],
+    "description": "React prop types"
+  }
 }
