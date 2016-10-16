@@ -1,0 +1,37 @@
+{
+  "name": "vscode-r-snippets",
+  "version": "0.0.1",
+  "description": "Visual Studio Code react/es6 snippets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polovi/vscode-r-snippets.git"
+  },
+  "author": "",
+  "license": "./LICENSE.md",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
