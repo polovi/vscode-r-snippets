@@ -6,8 +6,8 @@
     "type": "git",
     "url": "git+https://github.com/polovi/vscode-r-snippets.git"
   },
-  "author": "",
   "license": "./LICENSE.md",
+  "publisher": "polovi",
   "engines": {
     "vscode": "0.10.x"
   },
