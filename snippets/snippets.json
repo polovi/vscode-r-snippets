@@ -11,7 +11,7 @@
   "importDestructing": {
     "prefix": "imd",
     "body": [
-      "import { $2:moduleName } from '${1:module}'",
+      "import { ${2:moduleName} } from '${1:module}'",
       "$3"
     ],
     "description": "Imports only a portion of the module"
